@@ -57,21 +57,23 @@ const Footer: React.FC = () => {
                 <h2 className="mb-3 text-sm font-medium tracking-widest text-ic-secondary uppercase">
                   Company
                 </h2>
-                <div className="flex mx-auto w-full max-w-md md:mx-0">
-                  Address Here <br />
+                <div className="w-full text-center text-ic-primary lg:text-left">
+                  Address Line 1 <br />
+                  Address Line 2 <br />
+                  Address Line 3 <br />
                   Contact Number
                 </div>
               </div>
               <div>
-                <span className="inline-flex mb-5">
+                <span className="inline-flex gap-3 mb-5">
                   <a className="text-ic-primary">
                     <svg
                       fill="none"
                       stroke="currentColor"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth="2"
-                      className="w-5 h-5"
+                      strokeWidth="1"
+                      className="w-6 h-6"
                       viewBox="0 0 24 24"
                     >
                       <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -83,26 +85,26 @@ const Footer: React.FC = () => {
                       stroke="currentColor"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      strokeWidth="2"
-                      className="w-5 h-5"
+                      strokeWidth="1"
+                      className="w-6 h-6"
                       viewBox="0 0 24 24"
                     >
                       <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                     </svg>
                   </a>
                 </span>
-                <div className="flex flex-wrap justify-center mb-3 md:justify-start">
+                <div className="flex flex-wrap gap-3 justify-center mb-4 md:justify-start">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="pr-3 font-semibold text-ic-secondary hover:text-ic-primary transition duration-300"
+                      className="font-semibold text-ic-secondary hover:text-ic-primary transition duration-300"
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
-                <p className="text-sm text-ic-text">
+                <p className="text-xs text-ic-text">
                   Copyright © 2021 iComply by Copperbell Managed Corporate
                   Services. All rights reserved.
                 </p>

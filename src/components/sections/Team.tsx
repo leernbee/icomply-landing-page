@@ -3,6 +3,41 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Slider from 'react-slick';
 
+import SectionTitle from '../common/SectionTitle';
+
+const teamMembers = [
+  {
+    name: 'Guilian Sencio',
+    position: 'Chief Executive Officer',
+    image: '/assets/images/male2.jpg',
+  },
+  {
+    name: 'Guilian Sencio',
+    position: 'Chief Executive Officer',
+    image: '/assets/images/male2.jpg',
+  },
+  {
+    name: 'Guilian Sencio',
+    position: 'Chief Executive Officer',
+    image: '/assets/images/male2.jpg',
+  },
+  {
+    name: 'Guilian Sencio',
+    position: 'Chief Executive Officer',
+    image: '/assets/images/male2.jpg',
+  },
+  {
+    name: 'Guilian Sencio',
+    position: 'Chief Executive Officer',
+    image: '/assets/images/male2.jpg',
+  },
+  {
+    name: 'Guilian Sencio',
+    position: 'Chief Executive Officer',
+    image: '/assets/images/male2.jpg',
+  },
+];
+
 const Team: React.FC = () => {
   const Wrapper = styled.div`
     .slick-slider {
@@ -322,343 +357,41 @@ const Team: React.FC = () => {
 
   return (
     <>
-      <section className="py-32 bg-ic-accent lg:py-40">
-        <div className="container mx-auto">
-          <div className="flex flex-col w-full">
-            <h2 className="px-3 mx-auto mb-3 max-w-3xl font-inter text-3xl font-semibold leading-tight text-center text-ic-primary lg:text-5xl">
-              Work with trusted professionals from various fields.
-            </h2>
-
-            <p className="px-4 mx-auto mb-3 max-w-6xl text-2xl text-center text-ic-text">
-              With a combined 3,000 clients and decades of experience in their
-              respective fields
-            </p>
-            {/* <h2 className="px-4 mb-8 font-inter text-3xl font-medium text-center text-cb-primary">
-              Here are some of the services we offer.
-            </h2>
-            <div className="flex flex-wrap px-4 mx-auto max-w-5xl max-auto">
-              <div className="py-2 px-4 w-full sm:w-1/2 order-0">
-                <div className="flex items-center p-4 h-full bg-ic-primary rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 mr-3 w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                  <span className="text-white">
-                    Business Registration or Renewal (SEC, DTI, BIR, City)
-                  </span>
-                </div>
-              </div>
-              <div className="order-6 py-2 px-4 w-full sm:w-1/2">
-                <div className="flex items-center p-4 h-full bg-ic-primary rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 mr-3 w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                  <span className="text-white">
-                    Food and Drug Administration
-                  </span>
-                </div>
-              </div>
-              <div className="order-2 py-2 px-4 w-full sm:w-1/2">
-                <div className="flex items-center p-4 h-full bg-ic-primary rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 mr-3 w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                  <span className="text-white">
-                    Secretarial & Corporate Housekeeping
-                  </span>
-                </div>
-              </div>
-              <div className="order-7 py-2 px-4 w-full sm:w-1/2">
-                <div className="flex items-center p-4 h-full bg-ic-primary rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 mr-3 w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                  <span className="text-white">Secondary Licenses</span>
-                </div>
-              </div>
-              <div className="order-3 py-2 px-4 w-full sm:w-1/2">
-                <div className="flex items-center p-4 h-full bg-ic-primary rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 mr-3 w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                  <span className="text-white">Bookkeeping & Accounting</span>
-                </div>
-              </div>
-              <div className="order-8 py-2 px-4 w-full sm:w-1/2">
-                <div className="flex items-center p-4 h-full bg-ic-primary rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 mr-3 w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                  <span className="text-white">Online Notarial Services</span>
-                </div>
-              </div>
-              <div className="order-4 py-2 px-4 w-full sm:w-1/2">
-                <div className="flex items-center p-4 h-full bg-ic-primary rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 mr-3 w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                  <span className="text-white">Human Resources & Payroll</span>
-                </div>
-              </div>
-              <div className="order-9 py-2 px-4 w-full sm:w-1/2">
-                <div className="flex items-center p-4 h-full bg-ic-primary rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 mr-3 w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                  <span className="text-white">Other Legal Matters</span>
-                </div>
-              </div>
-              <div className="order-5 py-2 px-4 w-full sm:w-1/2">
-                <div className="flex items-center p-4 h-full bg-ic-primary rounded-md">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="shrink-0 mr-3 w-6 h-6 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                    />
-                  </svg>
-                  <span className="text-white">
-                    Patents, Trademarks, & other Intellectual Property
-                  </span>
-                </div>
-              </div>
-            </div> */}
+      <section className="py-32 w-full bg-ic-accent lg:py-40 ">
+        <div className="container relative mx-auto max-w-7xl">
+          <div className="text-center text-ic-primary">
+            <SectionTitle
+              title="Work with trusted professionals from various fields."
+              subtitle="With a combined 3,000 clients and decades of experience in their respective fields"
+            />
           </div>
         </div>
       </section>
       <section>
         <div className="mx-auto -mt-20 w-full max-w-7xl">
           <Wrapper>
-            <Slider {...settings} className="mb-20">
-              <div className="px-2 mb-3">
-                <div className="flex flex-col items-center h-full text-center">
-                  <img
-                    alt="team"
-                    className="object-cover object-center shrink-0 mb-4 h-56 rounded-lg"
-                    src="/assets/images/male2.jpg"
-                  />
-                  <div className="w-full">
-                    <h2 className="text-lg font-medium title-font text-cb-primary">
-                      Guilian Sencio
-                    </h2>
-                    <h3 className="mb-3 text-sm text-cb-text">
-                      Chief Executive Officer
-                    </h3>
+            <Slider {...settings}>
+              {teamMembers.map((teamMember, i) => (
+                <div key={i} className="px-2 mb-3">
+                  <div className="flex flex-col items-center h-full text-center">
+                    <img
+                      alt="team"
+                      className="object-cover object-center shrink-0 mb-4 h-56 rounded-lg"
+                      src={teamMember.image}
+                    />
+                    <div className="w-full">
+                      <h2 className="text-lg font-medium text-ic-primary title-font">
+                        {teamMember.name}
+                      </h2>
+                      <h3 className="mb-3 text-xs text-ic-text">
+                        {teamMember.position}
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="px-2 mb-3">
-                <div className="flex flex-col items-center h-full text-center">
-                  <img
-                    alt="team"
-                    className="object-cover object-center shrink-0 mb-4 h-56 rounded-lg"
-                    src="/assets/images/male5.jpg"
-                  />
-                  <div className="w-full">
-                    <h2 className="text-lg font-medium title-font text-cb-primary">
-                      Llino Del Rosario
-                    </h2>
-                    <h3 className="mb-3 text-sm text-cb-text">
-                      Chief Technology Officer
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div className="px-2 mb-3">
-                <div className="flex flex-col items-center h-full text-center">
-                  <img
-                    alt="team"
-                    className="object-cover object-center shrink-0 mb-4 h-56 rounded-lg"
-                    src="/assets/images/male3.jpg"
-                  />
-                  <div className="w-full">
-                    <h2 className="text-lg font-medium title-font text-cb-primary">
-                      Atty. Raymond Rodis
-                    </h2>
-                    <h3 className="mb-3 text-sm text-cb-text">
-                      Chief Legal Counsel
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div className="px-2 mb-3">
-                <div className="flex flex-col items-center h-full text-center">
-                  <img
-                    alt="team"
-                    className="object-cover object-center shrink-0 mb-4 h-56 rounded-lg"
-                    src="/assets/images/female1.jpg"
-                  />
-                  <div className="w-full">
-                    <h2 className="text-lg font-medium title-font text-cb-primary">
-                      Thea Avencula, CPA
-                    </h2>
-                    <h3 className="mb-3 text-sm text-cb-text">
-                      Associate Partner, Accounting
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div className="px-2 mb-3">
-                <div className="flex flex-col items-center h-full text-center">
-                  <img
-                    alt="team"
-                    className="object-cover object-center shrink-0 mb-4 h-56 rounded-lg"
-                    src="/assets/images/male1.jpg"
-                  />
-                  <div className="w-full">
-                    <h2 className="text-lg font-medium title-font text-cb-primary">
-                      Atty. Jonathan Lewis
-                    </h2>
-                    <h3 className="mb-3 text-sm text-cb-text">
-                      Associate Partner, Legal Services
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div className="px-2 mb-3">
-                <div className="flex flex-col items-center h-full text-center">
-                  <img
-                    alt="team"
-                    className="object-cover object-center shrink-0 mb-4 h-56 rounded-lg"
-                    src="/assets/images/male4.jpg"
-                  />
-                  <div className="w-full">
-                    <h2 className="text-lg font-medium title-font text-cb-primary">
-                      Peter Dio, CPA
-                    </h2>
-                    <h3 className="mb-3 text-sm text-cb-text">
-                      Associate Partner, Payroll
-                    </h3>
-                  </div>
-                </div>
-              </div>
-              <div className="px-2 mb-3">
-                <div className="flex flex-col items-center h-full text-center">
-                  <img
-                    alt="team"
-                    className="object-cover object-center shrink-0 mb-4 h-56 rounded-lg"
-                    src="/assets/images/male6.jpg"
-                  />
-                  <div className="w-full">
-                    <h2 className="text-lg font-medium title-font text-cb-primary">
-                      Bravin Cruz
-                    </h2>
-                    <h3 className="mb-3 text-sm text-cb-text">
-                      Chief Consultant, Secondary Licenses
-                    </h3>
-                  </div>
-                </div>
-              </div>
+              ))}
             </Slider>
           </Wrapper>
-          {/* <h2 className="px-4 my-8 text-3xl font-medium text-center title-font text-cb-primary">
-            “Meet the awesome team behind iComply
-          </h2>
-          <p className="px-4 mx-auto mb-3 text-lg leading-relaxed text-center lg:w-2/3 text-cb-secondary">
-            Small and medium enterprises need all the advantages they can get.
-            Here at iComply, we provide operational edge and efficiency at a
-            fraction of the traditional cost of corporate maintenance. Our team
-            of seasoned industry practitioners will assist you in every step of
-            the way on a collaboration and automation platform that was made for
-            this very purpose.
-          </p>
-          <p className="mx-auto leading-relaxed text-center text-cb-text lg:w-2/3">
-            - Guilian Sencio, CEO
-          </p> */}
         </div>
       </section>
     </>

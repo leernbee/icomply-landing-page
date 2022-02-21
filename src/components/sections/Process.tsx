@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SectionTitle from '../common/SectionTitle';
+
 const files = [
   {
     title: 'Workflows are automated',
@@ -26,35 +28,28 @@ const files = [
 
 const Process: React.FC = () => {
   return (
-    <section className="py-32">
-      <div className="container px-3 mx-auto w-full max-w-7xl">
-        <h2 className="px-3 mx-auto mb-16 max-w-3xl font-inter text-3xl font-semibold leading-tight text-center text-ic-secondary lg:text-5xl">
-          How iComply works
-        </h2>
-
+    <section className="py-32 w-full lg:py-40">
+      <div className="container relative px-3 mx-auto max-w-7xl xl:px-0">
+        <div className="text-center text-ic-primary">
+          <SectionTitle title="How iComply works" subtitle="" />
+        </div>
         <ul
           role="list"
-          className="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"
+          className="grid gap-x-4 gap-y-8 mt-16 sm:gap-x-6 md:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
         >
           {files.map((file) => (
             <li key={file.title} className="relative">
-              <div className="group aspect-1 block overflow-hidden w-full bg-gray-100 rounded-lg focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 focus-within:ring-offset-gray-100">
+              <div className="group aspect-1 flex overflow-hidden p-5 mb-5 w-full bg-ic-secondary-50 rounded-lg focus-within:ring-2 focus-within:ring-ic-secondary-500 focus-within:ring-offset-2 focus-within:ring-offset-ic-secondary-100 shadow-sm">
                 <img
                   src={file.source}
                   alt=""
-                  className="object-cover group-hover:opacity-75 pointer-events-none"
+                  className="object-cover items-center group-hover:opacity-75 pointer-events-none"
                 />
-                <button
-                  type="button"
-                  className="absolute inset-0 focus:outline-none"
-                >
-                  <span className="sr-only">View details for {file.title}</span>
-                </button>
               </div>
-              <p className="block mt-4 font-medium text-gray-900 truncate pointer-events-none text-md">
+              <p className="block mb-2 font-medium text-ic-primary pointer-events-none text-md">
                 {file.title}
               </p>
-              <p className="block text-sm font-medium text-ic-secondary-300 pointer-events-none">
+              <p className="block text-sm font-medium text-ic-secondary-500 pointer-events-none">
                 {file.size}
               </p>
             </li>

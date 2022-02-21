@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SectionTitle from '../common/SectionTitle';
+
 const posts = [
   {
     title: 'Boost your conversion rate',
@@ -22,7 +24,7 @@ const posts = [
   {
     title: 'How to use search engine optimization to drive sales',
     href: '#',
-    category: { name: 'Video', href: '#' },
+    category: { name: 'Article', href: '#' },
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilis asperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora aut inventore optio animi., tempore temporibus quo laudantium.',
     date: 'Mar 10, 2020',
@@ -40,7 +42,7 @@ const posts = [
   {
     title: 'Improve your customer experience',
     href: '#',
-    category: { name: 'Case Study', href: '#' },
+    category: { name: 'Article', href: '#' },
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerum voluptatem quo recusandae magni placeat saepe molestiae, sed excepturi cumque corporis perferendis hic.',
     date: 'Feb 12, 2020',
@@ -59,71 +61,67 @@ const posts = [
 
 const Blog: React.FC = () => {
   return (
-    <section className="py-32 lg:py-40">
-      <div className="container px-3 mx-auto w-full max-w-7xl">
-        <div className="relative mx-auto max-w-7xl">
-          <div className="text-center">
-            <h2 className="px-3 mx-auto mb-16 max-w-3xl font-inter text-3xl font-semibold leading-tight text-center text-ic-text lg:text-5xl">
-              Our Publications
-            </h2>
-          </div>
-          <div className="grid gap-5 mx-auto mt-12 max-w-lg lg:grid-cols-3 lg:max-w-none">
-            {posts.map((post) => (
-              <div
-                key={post.title}
-                className="flex overflow-hidden flex-col rounded-lg shadow-lg"
-              >
-                <div className="shrink-0">
-                  <img
-                    className="object-cover w-full h-48"
-                    src={post.imageUrl}
-                    alt=""
-                  />
-                </div>
-                <div className="flex flex-col flex-1 justify-between p-6 bg-white">
-                  <div className="flex-1">
-                    <p className="text-sm font-medium text-ic-secondary">
-                      <a href={post.category.href} className="hover:underline">
-                        {post.category.name}
-                      </a>
+    <section className="py-32 w-full lg:py-40">
+      <div className="container relative px-3 mx-auto max-w-7xl xl:px-0">
+        <div className="text-center text-ic-primary">
+          <SectionTitle title="Our Publications" subtitle="" />
+        </div>
+        <div className="grid gap-5 mx-auto mt-16 max-w-lg lg:grid-cols-3 lg:max-w-none">
+          {posts.map((post) => (
+            <div
+              key={post.title}
+              className="flex overflow-hidden flex-col rounded-md shadow-sm"
+            >
+              <div className="shrink-0">
+                <img
+                  className="object-cover w-full h-48"
+                  src={post.imageUrl}
+                  alt=""
+                />
+              </div>
+              <div className="flex flex-col flex-1 justify-between p-6 bg-white">
+                <div className="flex-1">
+                  <p className="text-sm font-medium text-ic-secondary">
+                    <a href={post.category.href} className="hover:underline">
+                      {post.category.name}
+                    </a>
+                  </p>
+                  <a href={post.href} className="block mt-2">
+                    <p className="text-xl font-semibold text-gray-900">
+                      {post.title}
                     </p>
-                    <a href={post.href} className="block mt-2">
-                      <p className="text-xl font-semibold text-gray-900">
-                        {post.title}
-                      </p>
-                      <p className="mt-3 text-base text-gray-500">
-                        {post.description}
-                      </p>
+                    <p className="mt-3 text-base text-ic-secondary-400">
+                      {post.description}
+                    </p>
+                  </a>
+                </div>
+                <div className="flex items-center mt-6">
+                  <div className="shrink-0">
+                    <a href={post.author.href}>
+                      <span className="sr-only">{post.author.name}</span>
+                      <img
+                        className="w-10 h-10 rounded-full"
+                        src={post.author.imageUrl}
+                        alt=""
+                      />
                     </a>
                   </div>
-                  <div className="flex items-center mt-6">
-                    <div className="shrink-0">
-                      <a href={post.author.href}>
-                        <span className="sr-only">{post.author.name}</span>
-                        <img
-                          className="w-10 h-10 rounded-full"
-                          src={post.author.imageUrl}
-                          alt=""
-                        />
+                  <div className="ml-3">
+                    <p className="text-sm font-medium text-gray-900">
+                      <a href={post.author.href} className="hover:underline">
+                        {post.author.name}
                       </a>
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-sm font-medium text-gray-900">
-                        <a href={post.author.href} className="hover:underline">
-                          {post.author.name}
-                        </a>
-                      </p>
-                      <div className="flex space-x-1 text-sm text-gray-500">
-                        <time dateTime={post.datetime}>{post.date}</time>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>{post.readingTime} read</span>
-                      </div>
+                    </p>
+                    <div className="flex space-x-1 text-sm text-ic-secondary-400">
+                      <time dateTime={post.datetime}>{post.date}</time>
+                      <span aria-hidden="true">&middot;</span>
+                      <span>{post.readingTime} read</span>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

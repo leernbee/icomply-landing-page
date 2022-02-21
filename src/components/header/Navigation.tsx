@@ -9,51 +9,48 @@ const solutions = [
   {
     name: 'Corporation',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, deleniti.',
+      'Limited liability entity for 1 to 15 starting incorporators. Start with as low as 1 peso capital and get your Certificate of Incorporation in as fast as one day!',
     href: '#',
   },
   {
     name: 'Sole Proprietor',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, deleniti.',
+      'Simple business entity for one business owner. Minimal reportorial requirements and quick processing.',
     href: '#',
   },
   {
     name: 'Freelancer/Consultant',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, deleniti.',
+    description: 'Coming Soon',
     href: '#',
   },
   {
     name: 'Licensed Professional',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, deleniti.',
+    description: 'Coming Soon',
     href: '#',
   },
 ];
 const resources = [
   {
     name: 'FAQ',
-    description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, deleniti.',
+    description: "What you're curious about may already have answers here.",
     href: '#',
   },
   {
     name: 'Contact Us',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, deleniti.',
+      "If you don't know what service to get or perhaps you need professional advice, hit us up here anytime.",
     href: '#',
   },
   {
     name: 'Publications',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, deleniti.',
+      "Useful articles on corporate, business, and legal topics. Subscribe and, we promise, you'll only receive relevant and insightful newsletters you'll surely need in your everyday business life",
     href: '#',
   },
   {
     name: 'Partnership',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, deleniti.',
+      'Do you want to be a part of the iComply team? Be a service provider in our legal, accounting, and human resource segments and expand your client base.',
     href: '#',
   },
 ];
@@ -150,7 +147,7 @@ export default function Navigation() {
           </a> */}
         </div>
         <div className="-my-2 -mr-2 ml-auto xl:hidden">
-          <Popover.Button className="inline-flex justify-center items-center p-2 text-ic-primary hover:text-ic-secondary bg-white hover:bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+          <Popover.Button className="inline-flex justify-center items-center p-2 text-ic-primary hover:text-ic-secondary bg-white hover:bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-ic-secondary">
             <span className="sr-only">Open menu</span>
             <MenuIcon className="w-6 h-6" aria-hidden="true" />
           </Popover.Button>
@@ -168,11 +165,11 @@ export default function Navigation() {
                   ref={(el: HTMLButtonElement) => (buttonRef.current[0] = el)}
                   className={classNames(
                     open ? 'text-ic-primary' : 'text-ic-secondary',
-                    'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-ic-primary focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-indigo-500'
+                    'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-ic-primary focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-ic-secondary'
                   )}
                   onClick={() => handleClick(open)}
                 >
-                  <span>Solutions</span>
+                  <span>Company Registration</span>
                   <ChevronDownIcon
                     className={classNames(
                       open ? 'text-ic-secondary' : 'text-ic-primary',
@@ -247,7 +244,7 @@ export default function Navigation() {
                   ref={(el: HTMLButtonElement) => (buttonRef.current[1] = el)}
                   className={classNames(
                     open ? 'text-ic-primary' : 'text-ic-secondary',
-                    'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-ic-primary focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-indigo-500'
+                    'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-ic-primary focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-ic-primary'
                   )}
                   onClick={() => handleClick(open)}
                 >
@@ -325,7 +322,7 @@ export default function Navigation() {
           focus
           className="absolute inset-x-0 top-0 p-2 transition origin-top-right xl:hidden"
         >
-          <div className="bg-white rounded-lg divide-y-2 divide-gray-50 ring-1 ring-black shadow-lg ring-opacity/5">
+          <div className="bg-white rounded-lg divide-y-2 divide-gray-50 shadow-md ring-opacity/5">
             <div className="px-5 pt-5 pb-6">
               <div className="flex justify-between items-center">
                 <div>
@@ -336,7 +333,7 @@ export default function Navigation() {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex justify-center items-center p-2 text-ic-primary hover:text-ic-secondary bg-white hover:bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <Popover.Button className="inline-flex justify-center items-center p-2 text-ic-primary hover:text-ic-secondary bg-white hover:bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-ic-secondary">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="w-6 h-6" aria-hidden="true" />
                   </Popover.Button>

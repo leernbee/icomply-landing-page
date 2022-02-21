@@ -5,9 +5,16 @@ const Newsletter: React.FC = () => {
     <section>
       <div className="bg-white">
         <div className="px-4 mx-auto mb-32 max-w-7xl sm:px-6 lg:px-8 lg:mb-40">
-          <div className="py-10 px-6 bg-ic-primary rounded-3xl sm:py-16 sm:px-12 lg:flex lg:items-center lg:p-20">
-            <div className="lg:flex-1 lg:w-0">
-              <h2 className="mb-3 text-3xl font-extrabold tracking-tight text-white">
+          <div className="py-10 px-6 bg-ic-primary rounded-3xl shadow-sm sm:py-16 sm:px-12 lg:flex lg:items-center lg:p-20">
+            <div className="flex justify-center my-12 text-center sm:w-full lg:flex-1 lg:order-1 lg:my-0 lg:ml-8">
+              <img
+                className="mx-auto w-52 lg:w-72"
+                src="/assets/images/newsletter.svg"
+                alt=""
+              />
+            </div>
+            <div className="lg:flex-1 lg:w-0 lg:order-0">
+              <h2 className="mb-3 text-xl font-extrabold tracking-tight text-white lg:text-2xl">
                 Get the latest updates on regulations, compliance, and legal
                 digests.
               </h2>
@@ -45,13 +52,6 @@ const Newsletter: React.FC = () => {
                   Privacy Policy
                 </a>
               </p>
-            </div>
-            <div className="mt-12 sm:w-full sm:max-w-md lg:flex-1 lg:mt-0 lg:ml-8">
-              <img
-                className="mx-auto w-60"
-                src="/assets/images/newsletter.svg"
-                alt=""
-              />
             </div>
           </div>
         </div>

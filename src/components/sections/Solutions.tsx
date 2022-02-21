@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SectionTitle from '../common/SectionTitle';
+
 const points = [
   {
     title: 'Clean & Crisp Corporate Management',
@@ -30,30 +32,31 @@ const points = [
 const Solutions: React.FC = () => {
   return (
     <section className="py-32 lg:py-40">
-      <div className="container flex flex-col px-4 mx-auto md:px-0 lg:flex-row h-100">
-        <div className="px-3 mx-auto mb-10 max-w-[320px] lg:mb-0 lg:max-w-[400px] xl:max-w-[540px]">
+      <div className="container flex flex-col px-3 mx-auto lg:flex-row h-100">
+        <div className="mx-auto mb-10 max-w-[320px] lg:mb-0 lg:max-w-[400px] xl:max-w-[540px]">
           <img
             className="object-cover object-center mx-auto rounded sm:mb-7"
             alt="hero"
             src="/assets/images/solutions.jpg"
           />
         </div>
-        <div className="flex flex-col lg:items-start lg:pl-16 lg:w-2/3 xl:pl-24">
-          <h2 className="mb-8 font-inter text-4xl font-semibold text-center text-ic-primary lg:text-left title-font">
-            We solve your pain points.
-          </h2>
+        <div className="flex flex-col text-center lg:items-start lg:pl-16 lg:w-2/3 lg:text-left xl:pl-24">
+          <div className="text-ic-primary">
+            <SectionTitle title="We solve your pain points" subtitle="" />
+          </div>
+
           {points.map((point, i) => (
             <div
               key={i}
-              className="flex flex-col grow items-start px-2 mt-8 sm:flex-row"
+              className="flex flex-col grow items-center px-2 mt-8 sm:flex-row lg:items-start"
             >
-              <div className="inline-flex shrink-0 justify-center items-center w-16 h-16 text-ic-accent bg-ic-secondary rounded-full">
+              <div className="inline-flex shrink-0 justify-center items-center w-16 h-16 text-ic-secondary bg-ic-accent rounded-full">
                 <svg
                   fill="none"
                   stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth="2"
+                  strokeWidth="1"
                   className="w-10 h-10"
                   viewBox="0 0 24 24"
                 >
@@ -64,7 +67,7 @@ const Solutions: React.FC = () => {
                 <h2 className="mb-1 text-2xl font-medium text-ic-primary title-font">
                   {point.title}
                 </h2>
-                <p className="max-w-2xl text-xl text-ic-secondary">
+                <p className="max-w-2xl text-lg text-ic-secondary">
                   {point.description}
                 </p>
               </div>

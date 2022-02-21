@@ -49,7 +49,7 @@ const settings = {
 const Companies: React.FC = () => {
   return (
     <section className="relative z-10">
-      <div className="py-12 px-4 bg-cb-accent">
+      <div className="px-4">
         <Slider {...settings}>
           <div>
             <img

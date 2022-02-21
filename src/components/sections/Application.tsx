@@ -1,13 +1,18 @@
 import React from 'react';
 
+import SectionTitle from '../common/SectionTitle';
+
 const Application: React.FC = () => {
   return (
-    <section className="py-32 bg-ic-secondary-600 lg:py-40">
-      <div className="container px-4 mx-auto">
-        <h2 className="px-3 mx-auto mb-16 max-w-3xl font-inter text-3xl font-semibold leading-tight text-center text-white lg:text-5xl">
-          A Powerful Regulatory Management Suite
-        </h2>
-        <div className="flex flex-wrap mx-4">
+    <section className="py-32 w-full bg-ic-primary lg:py-40">
+      <div className="container relative mx-auto max-w-7xl">
+        <div className="text-center text-white">
+          <SectionTitle
+            title="A Powerful Regulatory Management Suite"
+            subtitle=""
+          />
+        </div>
+        <div className="flex flex-wrap mx-4 mt-16">
           <div className="py-2 w-full md:p-4 md:w-2/4 xl:w-1/4">
             <div className="flex flex-col p-8 h-full bg-ic-accent rounded-lg">
               <div className="flex items-center mb-3">
