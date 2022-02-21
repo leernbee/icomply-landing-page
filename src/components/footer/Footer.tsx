@@ -10,7 +10,7 @@ const navigation = [
 ];
 
 const navigation2 = [
-  { name: 'Our Team', href: '/team' },
+  { name: 'Our Team', href: '/our-team' },
   { name: 'Services and Pricing', href: '/services' },
   { name: 'Become a Partner', href: '/partnership' },
   { name: 'Publications', href: '/blog' },
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
             <h2 className="mb-3 text-sm font-medium tracking-widest text-ic-secondary uppercase">
               Navigation
             </h2>
-            <nav className="mb-8 text-4xl list-none lg:text-5xl">
+            <nav className="mb-8 text-4xl list-none xl:text-5xl">
               {navigation2.map((item) => (
                 <li key={item.name}>
                   <a

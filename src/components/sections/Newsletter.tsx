@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Link from 'next/link';
+
 const Newsletter: React.FC = () => {
   return (
     <section>
@@ -44,13 +46,17 @@ const Newsletter: React.FC = () => {
               </form>
               <p className="mt-3 text-sm text-ic-secondary-100">
                 By subscribing you agree to our{' '}
-                <a href="#" className="font-medium text-white underline">
-                  Terms & Conditions
-                </a>{' '}
+                <Link href="/terms">
+                  <a className="font-medium text-white underline">
+                    Terms & Conditions
+                  </a>
+                </Link>{' '}
                 and{' '}
-                <a href="#" className="font-medium text-white underline">
-                  Privacy Policy
-                </a>
+                <Link href="/privacy">
+                  <a className="font-medium text-white underline">
+                    Privacy Policy
+                  </a>
+                </Link>
               </p>
             </div>
           </div>

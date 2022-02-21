@@ -4,6 +4,7 @@ import { Fragment, useRef, useState, useEffect } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { ChevronDownIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 
 const solutions = [
   {
@@ -33,13 +34,13 @@ const resources = [
   {
     name: 'FAQ',
     description: "What you're curious about may already have answers here.",
-    href: '#',
+    href: '/faq',
   },
   {
     name: 'Contact Us',
     description:
       "If you don't know what service to get or perhaps you need professional advice, hit us up here anytime.",
-    href: '#',
+    href: '/contact-us',
   },
   {
     name: 'Publications',
@@ -51,7 +52,7 @@ const resources = [
     name: 'Partnership',
     description:
       'Do you want to be a part of the iComply team? Be a service provider in our legal, accounting, and human resource segments and expand your client base.',
-    href: '#',
+    href: '/partnership',
   },
 ];
 
@@ -111,40 +112,39 @@ export default function Navigation() {
   });
 
   const [navCSS, setNavCSS] = useState('m-2 rounded-md');
+  const [buttonCSS, setButtonCSS] = useState('hidden');
 
   useEffect(() => {
     document.addEventListener('scroll', () => {
       const scrollCheck = window.scrollY;
       if (scrollCheck > 100) {
-        setNavCSS('m-0 rounded-none transition-all ease-in-out delay-150');
+        setNavCSS(
+          'm-0 rounded-none transition-all ease-in-out delay-150 shadow-sm'
+        );
+        setButtonCSS('inline-flex');
       } else {
         setNavCSS('m-2 rounded-md');
+        setButtonCSS('hidden');
       }
     });
   });
 
   return (
-    <Popover className="fixed top-0 z-50 w-full ">
+    <Popover className="fixed top-0 z-50 w-full">
       <div
         className={`flex justify-between items-center py-6 px-4 bg-white sm:px-6 xl:justify-start xl:space-x-10 ${navCSS}`}
       >
         <div className="flex justify-start">
-          <a href="#">
-            <span className="sr-only">iComply</span>
-            <img
-              className="w-auto h-8 sm:h-10"
-              src="../assets/images/icomply-blue-logo.svg"
-              alt=""
-            />
-          </a>
-          {/* <a href="#" className="hidden xl:flex">
-            <span className="sr-only">iComply</span>
-            <img
-              className="w-auto h-8 sm:h-10"
-              src="../assets/images/icomply-square-blue-logo.svg"
-              alt=""
-            />
-          </a> */}
+          <Link href="/">
+            <a>
+              <span className="sr-only">iComply</span>
+              <img
+                className="w-auto h-8 sm:h-10"
+                src="../assets/images/icomply-blue-logo.svg"
+                alt=""
+              />
+            </a>
+          </Link>
         </div>
         <div className="-my-2 -mr-2 ml-auto xl:hidden">
           <Popover.Button className="inline-flex justify-center items-center p-2 text-ic-primary hover:text-ic-secondary bg-white hover:bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-ic-secondary">
@@ -302,7 +302,7 @@ export default function Navigation() {
           </a>
           <a
             href="#"
-            className="inline-flex justify-center items-center py-3 px-6 ml-8 text-base font-medium text-white whitespace-nowrap bg-ic-secondary hover:bg-ic-primary rounded-md border border-transparent shadow-sm"
+            className={`justify-center items-center py-3 px-6 ml-8 text-base font-medium text-white whitespace-nowrap bg-ic-secondary hover:bg-ic-primary rounded-md border border-transparent shadow-sm transition-all ${buttonCSS}`}
           >
             Get Started
           </a>
@@ -340,7 +340,7 @@ export default function Navigation() {
                 </div>
               </div>
               <div className="mt-6">
-                <nav className="grid grid-cols-1 gap-7">
+                <nav className="grid grid-cols-1 gap-4">
                   {solutions.map((solution) => (
                     <a
                       key={solution.name}
