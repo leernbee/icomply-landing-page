@@ -21,16 +21,18 @@ const Partnership = () => {
               <h1 className="text-2xl font-semibold text-ic-primary uppercase lg:text-3xl">
                 iComply Partnership
               </h1>
-              <p className="py-3 mb-4 text-xl text-ic-secondary">
-                Becoming a iComply Partner means you can serve a wider pool of
-                clients alongside other top industry professionals on your own
-                iComply Dashboard.
-              </p>
-              <Link href="#form-partners">
-                <a className="inline-block py-3 px-5 font-medium text-white bg-ic-secondary hover:bg-ic-primary rounded-md transition duration-300 text-md">
-                  Apply Now
-                </a>
-              </Link>
+              <div className="mx-auto max-w-5xl">
+                <p className="py-3 mb-4 text-xl text-ic-secondary">
+                  Becoming a iComply Partner means you can serve a wider pool of
+                  clients alongside other top industry professionals on your own
+                  iComply Dashboard.
+                </p>
+                <Link href="#form-partners">
+                  <a className="inline-block py-3 px-5 font-medium text-white bg-ic-secondary hover:bg-ic-primary rounded-md transition duration-300 text-md">
+                    Apply Now
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

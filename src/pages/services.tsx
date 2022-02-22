@@ -52,18 +52,25 @@ const services = [
 const Services = () => (
   <Main meta={<Meta title="Lorem ipsum" description="Lorem ipsum" />}>
     <Navigation />
-    <PageHeader title="Our Services">
-      <p className="mt-4 max-w-3xl text-xl font-medium text-ic-secondary">
-        Let go of mountains of paperwork so you can focus on what you do best.
-      </p>
-      <p className="mt-4 max-w-3xl text-ic-text text-md">
-        Our managed corporate services will connect you to leading industry
-        practitioners
-      </p>
-    </PageHeader>
+    <PageHeader title="Our Services" />
 
     <div className="bg-white">
       <div className="flex flex-col xl:flex-row">
+        <div className="flex-auto px-4 mb-20 border-ic-accent sm:px-6 lg:px-8 lg:mb-0 lg:border-2">
+          <div className="flex flex-col py-32 mx-auto max-w-lg xl:pt-40">
+            <h2 className="font-inter text-4xl font-semibold tracking-tight text-ic-primary">
+              iComply by Copperbell Managed Corporate Services
+            </h2>
+            <p className="mt-4 max-w-3xl text-xl font-medium text-ic-secondary">
+              Let go of mountains of paperwork so you can focus on what you do
+              best.
+            </p>
+            <p className="mt-4 max-w-3xl text-ic-text text-md">
+              Our managed corporate services will connect you to leading
+              industry practitioners
+            </p>
+          </div>
+        </div>
         <div className="max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3">
             {services.map((item, index) => (
