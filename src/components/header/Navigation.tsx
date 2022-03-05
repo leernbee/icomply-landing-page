@@ -295,14 +295,14 @@ export default function Navigation() {
         </Popover.Group>
         <div className="hidden justify-end items-center xl:flex xl:flex-1 xl:w-0">
           <a
-            href="#"
+            href="https://app.icomply.ph"
             className="text-base font-medium text-ic-secondary hover:text-ic-primary whitespace-nowrap"
           >
             Log In
           </a>
           <a
-            href="#"
-            className={`justify-center items-center py-3 px-6 ml-8 text-base font-medium text-white whitespace-nowrap bg-ic-secondary hover:bg-ic-primary rounded-md border border-transparent shadow-sm transition-all ${buttonCSS}`}
+            href="services"
+            className={`justify-center items-center py-3 px-6 ml-8 text-base font-medium text-white whitespace-nowrap bg-ic-secondary hover:bg-ic-secondary-600 rounded-md border border-transparent shadow-sm transition-all ${buttonCSS}`}
           >
             Get Started
           </a>

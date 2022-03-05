@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
             Our lawyers, accountants, and business management specialists will
             assist you every step of the way
           </p>
-          <Button type="secondary" />
+          <Button type="secondary" link="services" />
         </div>
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-transparent to-gray-100 z-100 h-100 w-100"></div>
       </div>

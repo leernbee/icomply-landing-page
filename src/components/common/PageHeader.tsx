@@ -6,7 +6,7 @@ const PageHeader = (props: any) => {
       <div className="pt-48 pb-24 w-full">
         <div className="flex justify-center items-center w-full h-full">
           <div className="text-center">
-            <h1 className="text-2xl font-semibold uppercase lg:text-3xl text-cb-primary">
+            <h1 className="text-2xl font-semibold text-ic-primary uppercase lg:text-3xl">
               {props.title}
             </h1>
             {props.children}

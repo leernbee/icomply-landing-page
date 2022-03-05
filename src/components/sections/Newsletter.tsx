@@ -39,7 +39,7 @@ const Newsletter: React.FC = () => {
                 />
                 <button
                   type="submit"
-                  className="flex justify-center items-center py-3 px-5 mt-3 w-full text-base font-medium text-white bg-ic-secondary-500 hover:bg-ic-secondary-400 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ic-primary sm:shrink-0 sm:mt-0 sm:ml-3 sm:w-auto"
+                  className="flex justify-center items-center py-3 px-5 mt-3 w-full text-base font-medium text-white bg-ic-secondary hover:bg-ic-secondary-600 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-ic-primary sm:shrink-0 sm:mt-0 sm:ml-3 sm:w-auto"
                 >
                   Subscribe
                 </button>
