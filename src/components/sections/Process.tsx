@@ -39,11 +39,11 @@ const Process: React.FC = () => {
         >
           {files.map((file) => (
             <li key={file.title} className="relative">
-              <div className="group aspect-1 flex overflow-hidden p-5 mb-5 w-full bg-ic-secondary-50 rounded-lg focus-within:ring-2 focus-within:ring-ic-secondary-500 focus-within:ring-offset-2 focus-within:ring-offset-ic-secondary-100 shadow-sm">
+              <div className="group aspect-1 flex overflow-hidden justify-center items-center p-5 mb-5 w-full bg-ic-secondary-50 rounded-lg focus-within:ring-2 focus-within:ring-ic-secondary-500 focus-within:ring-offset-2 focus-within:ring-offset-ic-secondary-100 shadow-sm">
                 <img
                   src={file.source}
                   alt=""
-                  className="object-cover items-center group-hover:opacity-75 pointer-events-none"
+                  className="object-contain items-center w-3/4 h-3/4 group-hover:opacity-75 pointer-events-none"
                 />
               </div>
               <p className="block mb-2 font-medium text-ic-primary pointer-events-none text-md">
