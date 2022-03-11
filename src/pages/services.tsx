@@ -13,7 +13,13 @@ const Services = () => (
         <div className="flex-auto px-4 mb-20 sm:px-6 lg:px-8 lg:mb-0">
           <div className="mx-auto max-w-7xl">
             <div className="grid grid-cols-1 lg:grid-cols-2">
-              <div>Image</div>
+              <div>
+                <img
+                  className="object-cover w-full max-h-80 h-100"
+                  src="/assets/images/new-business.jpg"
+                  alt=""
+                />
+              </div>
               <a
                 href="new-business"
                 className="group py-20 px-10 bg-ic-accent hover:bg-ic-secondary cursor-pointer"
@@ -38,7 +44,13 @@ const Services = () => (
                   Filings, Accounting, HR & Payroll
                 </p>
               </a>
-              <div>Image</div>
+              <div>
+                <img
+                  className="object-cover w-full max-h-80 h-100"
+                  src="/assets/images/existing-business.jpg"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </div>
